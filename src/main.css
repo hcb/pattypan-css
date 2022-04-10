@@ -159,7 +159,7 @@ p {
 a {
     color: var(--primary);
     transition: all 250ms;
-    text-decoration-style: wavy;
+    text-decoration: none;
     font-weight: 600;
 }
 
@@ -167,6 +167,14 @@ a:hover {
     color: var(--secondary);
 }
 
+/* Nav // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
+nav {
+    display: flex;flex-direction: row;
+}
+
+nav ul li{
+    list-style-type: none;
+}
 
 /* Lists // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
 ul {

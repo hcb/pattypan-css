@@ -26,8 +26,31 @@
 
     <header class="container">
         <h1>pattypan css</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#grid">grid</a></li>
+                <li><a href="#typography">typography</a>
+                    <ul>
+                        <li><a href="#other-tags">other tags</a></li>
+                        <li><a href="#lists">lists</a></li>
+                        <li><a href="#code">code</a></li>
+                    </ul>
+                </li>
+                <li><a href="#buttons">buttons</a></li>
+                <li><a href="#forms">forms</a></li>
+                <li><a href="#tables">tables</a></li>
+                <li><a href="#article">example article</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="container">
+        <section class="about" id="about">
+
+            <p><strong>pattypan css</strong> is an amalgamation of different CSS frameworks/libraries/boilerplate I've liked over the years, primarily <a href="https://github.com/dhg/Skeleton">Skeleton</a> (pattypan uses many of the same class names as Skeleton), as well as <a href="https://github.com/kristoferjoseph/flexboxgrid">Flexbox Grid</a> and <a href="https://github.com/jgthms/bulma">Bulma</a> to a lesser extent. I use this as a starter for my personal projects.</p>
+
+<p>The name 'pattypan css' came from another old project of mine: <a href="https://www.cakehat.com/namurjs">namurjs↗</a>. It sounded fitting since this is supposed to be small and kinda cute. 🦄 💜</p>
+        </section>
         <section class="grid" id="grid">
             <h3>Grid</h3>
             <div class="row">
@@ -79,7 +102,7 @@
                 mollitia. Cupiditate.</p>
 
             <!-- Other styled text tags -->
-            <h4>Other Tags</h4>
+            <h4 id="other-tags">Other Tags</h4>
             <a href="#">Link</a>
             <strong>Bolded</strong>
             <em>Italicized</em>
@@ -116,16 +139,14 @@
                 <li>Wash your hair</li>
             </ol>
 
-            <h4>Code</h4>
+            <h4 id="code">Code</h4>
             <pre><code>.some-class { background-color: red; }</code></pre>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laudantium veritatis voluptatem laboriosam,
                 quibusdam libero ad, voluptatibus saepe obcaecati exercitationem eaque, temporibus asperiores excepturi
                 quas laborum. Fugiat quod quibusdam veritatis.</p>
         </section>
 
-
-
-        <section class="buttons">
+        <section class="buttons" id="buttons">
             <h3>Buttons</h3>
             <!-- Standard buttons -->
             <a class="button" href="#">Anchor button</a>
@@ -140,7 +161,7 @@
             <input class="button-primary" type="button" value="button input">
         </section>
 
-        <section class="forms">
+        <section class="forms" id="forms">
             <h3>Forms</h3>
 
             <form>
@@ -222,13 +243,9 @@
                 </label>
                 <input class="button-primary" type="submit" value="Submit">
             </form>
-
-            <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
-
-            <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
         </section>
 
-        <section class="tables">
+        <section class="tables" id="tables">
             <h3>Tables</h3>
             <table class="u-full-width">
                 <thead>
@@ -255,77 +272,75 @@
                 </tbody>
             </table>
         </section>
-        <section class="lorem">
-            <h3>Article</h3>
-            <img src="https://placekitten.com/g/200/300" alt="Image float left" class="u-pull-left">
-            <p>Lorem ipsum dolor sit amet <a href="#">consectetur</a> adipisicing elit. <em>Numquam quaerat corporis
-                    voluptates</em> excepturi iure, eius earum itaque fugiat eum rerum. Quidem esse delectus voluptatum
-                impedit accusamus laudantium unde cum ratione? Ut illo provident unde veniam molestias consequatur, ex
-                expedita distinctio et magni odio iure delectus reprehenderit eum incidunt. In assumenda pariatur autem
-                expedita rem aliquid similique mollitia, sint officiis vel.</p>
-            <p>Vel optio ab officiis porro, laborum quisquam placeat earum <a href="#">consectetur</a> ut
-                <u>underlined</u> corrupti quaerat dolore odio adipisci obcaecati nemo cupiditate repellat nobis debitis
-                tempora deserunt ratione. Repellat quod earum fuga alias? Expedita odio suscipit non in ipsa illo sequi
-                amet. Illo veritatis quia in quas, accusamus labore similique neque voluptatem alias iste quod ullam
-                rerum architecto nostrum eius praesentium! Nihil, dolorum.
-            </p>
-            <img src="https://placekitten.com/400/320" alt="Image float right" class="u-pull-right">
-
-            <p>Minima tenetur alias, unde nihil totam at doloribus sunt blanditiis hic odit officia nostrum tempore vero
-                ratione amet velit illum, rerum voluptate quia voluptates quae veniam ipsum eum. Cumque, natus.</p>
-            <p>Magnam et assumenda nulla odio deleniti quos magni consequuntur dolore itaque eos illum tempore libero,
-                necessitatibus temporibus est veritatis explicabo molestias laudantium dolores natus sapiente.
-                Voluptatem sed architecto suscipit laudantium.</p>
-            <p>Placeat, deserunt sed quibusdam minima fugit voluptas? Quas quasi vel, architecto vero nostrum magni iure
-                voluptatum quo ducimus a odit quia aliquid unde debitis ipsa tempore laudantium minima reiciendis
-                numquam.</p>
-            <blockquote>Voluptas nisi cum temporibus, provident laudantium sapiente sed fuga dolor? Fuga quasi id
-                repellat, autem beatae corporis quam reiciendis quod, veritatis ipsa praesentium unde quo veniam
-                asperiores amet repudiandae nihil.</blockquote>
-            <p>Laudantium amet eum sint tempore commodi excepturi inventore accusantium deserunt magni iusto, itaque,
-                voluptatem porro rerum vitae temporibus obcaecati atque sapiente? Quo unde ipsa quod. Laborum quo
-                aliquid facere exercitationem.</p>
-            <p>Dolores <a href="#">blanditiis</a> dolorum, sapiente iste cum modi asperiores architecto repudiandae nam
-                numquam fugit quidem, <code>voluptas dolorem aperiam atque</code>, at harum reiciendis dolore culpa
-                recusandae id molestiae nulla deserunt. Sit, inventore!</p>
-            <pre><code>private parse4BitPixelData = (rawPixelData: any[]) => {
-    const parsedPixelData = [];
-    for (let i = 0; i < rawPixelData.length; i++) { 
-        const byte=rawPixelData[i]; 
-        const byteValue = padBinary(byte.toString(2), 8); 
-        const pix0 = parseInt(byteValue.slice(0, 4), 2); 
-        const pix1 = parseInt(byteValue.slice(4, 8), 2); 
-        parsedPixelData.push(pix0, pix1); 
-    } 
-    return parsedPixelData; 
-};</code>
-            </pre>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed neque repellendus vel aliquam
-                delectus, perspiciatis expedita laudantium adipisci quod doloribus voluptatum libero ea tenetur culpa
-                fugiat in! Necessitatibus, sit.
-                Doloremque facere facilis, sapiente in suscipit dolore a? Inventore quae voluptate esse vel. Doloremque
-                autem inventore nemo laborum in esse at, libero, reiciendis quia sunt exercitationem culpa repudiandae
-                consequatur blanditiis?</p>
-
-            <div class="row">
-                <div class="column one-half">
-                    <h4>A Kitten Called Destiny</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, maxime id deleniti non cum
-                        reprehenderit omnis quisquam. Blanditiis placeat iure temporibus distinctio eum aut dicta porro
-                        nulla, commodi in corporis.</p>
-                    <blockquote>Odit, cupiditate optio veniam, libero ratione porro assumenda iste error, sunt sapiente
-                        aspernatur? Fuga error placeat delectus! Nulla maxime earum expedita qui reiciendis aliquid
-                        vero. Commodi quod iure quas incidunt.</blockquote>
-                    <p>Odit, cupiditate optio veniam, libero ratione porro assumenda iste error, sunt sapiente
-                        aspernatur? Fuga error placeat delectus! Nulla maxime earum expedita qui reiciendis aliquid
-                        vero. Commodi quod iure quas incidunt.</p>
-
+        <section class="article" id="article">
+            <article>
+                <h3>Article</h3>
+                <img src="https://placekitten.com/g/200/300" alt="Image float left" class="u-pull-left">
+                <p>Lorem ipsum dolor sit amet <a href="#">consectetur</a> adipisicing elit. <em>Numquam quaerat corporis
+                        voluptates</em> excepturi iure, eius earum itaque fugiat eum rerum. Quidem esse delectus voluptatum
+                    impedit accusamus laudantium unde cum ratione? Ut illo provident unde veniam molestias consequatur, ex
+                    expedita distinctio et magni odio iure delectus reprehenderit eum incidunt. In assumenda pariatur autem
+                    expedita rem aliquid similique mollitia, sint officiis vel.</p>
+                <p>Vel optio ab officiis porro, laborum quisquam placeat earum <a href="#">consectetur</a> ut
+                    <u>underlined</u> corrupti quaerat dolore odio adipisci obcaecati nemo cupiditate repellat nobis debitis
+                    tempora deserunt ratione. Repellat quod earum fuga alias? Expedita odio suscipit non in ipsa illo sequi
+                    amet. Illo veritatis quia in quas, accusamus labore similique neque voluptatem alias iste quod ullam
+                    rerum architecto nostrum eius praesentium! Nihil, dolorum.
+                </p>
+                <img src="https://placekitten.com/400/320" alt="Image float right" class="u-pull-right">
+                <p>Minima tenetur alias, unde nihil totam at doloribus sunt blanditiis hic odit officia nostrum tempore vero
+                    ratione amet velit illum, rerum voluptate quia voluptates quae veniam ipsum eum. Cumque, natus.</p>
+                <p>Magnam et assumenda nulla odio deleniti quos magni consequuntur dolore itaque eos illum tempore libero,
+                    necessitatibus temporibus est veritatis explicabo molestias laudantium dolores natus sapiente.
+                    Voluptatem sed architecto suscipit laudantium.</p>
+                <p>Placeat, deserunt sed quibusdam minima fugit voluptas? Quas quasi vel, architecto vero nostrum magni iure
+                    voluptatum quo ducimus a odit quia aliquid unde debitis ipsa tempore laudantium minima reiciendis
+                    numquam.</p>
+                <blockquote>Voluptas nisi cum temporibus, provident laudantium sapiente sed fuga dolor? Fuga quasi id
+                    repellat, autem beatae corporis quam reiciendis quod, veritatis ipsa praesentium unde quo veniam
+                    asperiores amet repudiandae nihil.</blockquote>
+                <p>Laudantium amet eum sint tempore commodi excepturi inventore accusantium deserunt magni iusto, itaque,
+                    voluptatem porro rerum vitae temporibus obcaecati atque sapiente? Quo unde ipsa quod. Laborum quo
+                    aliquid facere exercitationem.</p>
+                <p>Dolores <a href="#">blanditiis</a> dolorum, sapiente iste cum modi asperiores architecto repudiandae nam
+                    numquam fugit quidem, <code>voluptas dolorem aperiam atque</code>, at harum reiciendis dolore culpa
+                    recusandae id molestiae nulla deserunt. Sit, inventore!</p>
+                <pre><code>private parse4BitPixelData = (rawPixelData: any[]) => {
+                    const parsedPixelData = [];
+                    for (let i = 0; i < rawPixelData.length; i++) { 
+                        const byte=rawPixelData[i]; 
+                        const byteValue = padBinary(byte.toString(2), 8); 
+                        const pix0 = parseInt(byteValue.slice(0, 4), 2); 
+                        const pix1 = parseInt(byteValue.slice(4, 8), 2); 
+                        parsedPixelData.push(pix0, pix1); 
+                    } 
+                    return parsedPixelData; 
+                };</code>
+                </pre>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed neque repellendus vel aliquam
+                    delectus, perspiciatis expedita laudantium adipisci quod doloribus voluptatum libero ea tenetur culpa
+                    fugiat in! Necessitatibus, sit.
+                    Doloremque facere facilis, sapiente in suscipit dolore a? Inventore quae voluptate esse vel. Doloremque
+                    autem inventore nemo laborum in esse at, libero, reiciendis quia sunt exercitationem culpa repudiandae
+                    consequatur blanditiis?</p>
+                <div class="row">
+                    <div class="column one-half">
+                        <h4>A Kitten Called Destiny</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, maxime id deleniti non cum
+                            reprehenderit omnis quisquam. Blanditiis placeat iure temporibus distinctio eum aut dicta porro
+                            nulla, commodi in corporis.</p>
+                        <blockquote>Odit, cupiditate optio veniam, libero ratione porro assumenda iste error, sunt sapiente
+                            aspernatur? Fuga error placeat delectus! Nulla maxime earum expedita qui reiciendis aliquid
+                            vero. Commodi quod iure quas incidunt.</blockquote>
+                        <p>Odit, cupiditate optio veniam, libero ratione porro assumenda iste error, sunt sapiente
+                            aspernatur? Fuga error placeat delectus! Nulla maxime earum expedita qui reiciendis aliquid
+                            vero. Commodi quod iure quas incidunt.</p>
+                    </div>
+                    <div class="column one-half">
+                        <img src="http://placekitten.com/g/800/525" alt="A place kitten">
+                    </div>
                 </div>
-
-                <div class="column one-half">
-                    <img src="http://placekitten.com/g/800/525" alt="A place kitten">
-                </div>
-            </div>
+            </article>
         </section>
 
     </main>
