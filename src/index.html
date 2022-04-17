@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pattypan css</title>
+    <!-- These will get combined into pattypan.css -->
+    <link rel="stylesheet" href="./_normalize.css">
+    <link rel="stylesheet" href="./grid.css">
     <link rel="stylesheet" href="./main.css">
     <style>
-        section.grid .column>*,
-        section.grid .columns>* {
+        /* Add some padding and a background color for descedent content within a column */
+        #grid .grid .column > * {
             background-color: var(--secondary);
             color: var(--white);
             margin-bottom: 1rem;
-            padding: 0.25rem;
+            padding: 0.5rem;
         }
 
-        section {
-            margin-bottom: 3rem;
+        /* Nested grid */
+        #grid .grid .column.grid .column > * {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        section > h1, section > h2, section > h3 {
+            border-bottom: 4px solid var(--gray-lighter);
         }
     </style>
 </head>
@@ -31,11 +40,11 @@
                 <li><a href="#about">about</a></li>
                 <li><a href="#grid">grid</a></li>
                 <li><a href="#typography">typography</a>
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#other-tags">other tags</a></li>
                         <li><a href="#lists">lists</a></li>
                         <li><a href="#code">code</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li><a href="#buttons">buttons</a></li>
                 <li><a href="#forms">forms</a></li>
@@ -46,61 +55,71 @@
     </header>
     <main class="container">
         <section class="about" id="about">
-
+                <h3>About</h3>
             <p><strong>pattypan css</strong> is an amalgamation of different CSS frameworks/libraries/boilerplate I've liked over the years, primarily <a href="https://github.com/dhg/Skeleton">Skeleton</a> (pattypan uses many of the same class names as Skeleton), as well as <a href="https://github.com/kristoferjoseph/flexboxgrid">Flexbox Grid</a> and <a href="https://github.com/jgthms/bulma">Bulma</a> to a lesser extent. I use this as a starter for my personal projects.</p>
-
-<p>The name 'pattypan css' came from another old project of mine: <a href="https://www.cakehat.com/namurjs">namurjs↗</a>. It sounded fitting since this is supposed to be small and kinda cute. 🦄 💜</p>
+            <p>The name 'pattypan css' came from another old project of mine: <a href="https://www.cakehat.com/namurjs">namurjs↗</a>. It sounded fitting since this is supposed to be small and kinda cute. 🦄 💜</p>
         </section>
-        <section class="grid" id="grid">
+        <section  id="grid">
             <h3>Grid</h3>
-            <div class="row">
+        
+            <div class="grid">
                 <div class="one column">
                     <p>One</p>
                 </div>
-                <div class="eleven columns">
+                <div class="eleven column">
                     <p>Eleven</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="two columns">
+                <div class="two column">
                     <p>Two</p>
                 </div>
-                <div class="ten columns">
+                <div class="ten column">
                     <p>Ten</p>
                 </div>
-            </div>
-            <div class="row">
                 <div class="one-third column">
                     <p>1/3</p>
                 </div>
                 <div class="two-thirds column">
                     <p>2/3</p>
                 </div>
-            </div>
-            <div class="row">
                 <div class="one-half column">
                     <p>1/2</p>
                 </div>
                 <div class="one-half column">
                     <p>1/2</p>
+                </div>
+            </div>
+
+            <h4 id="nested">Nested</h4>
+            <div class="grid">
+                <div class="one-half column grid">
+                    <div class="one-half column">
+                        <p>Nested <code>.one-half.column</code></p></div>
+                    <div class="one-half column"><p>Nested <code>.one-half.column</code></p></div>
+                </div>
+                <div class="one-half column">
+                    <p>Not nested</p>
                 </div>
             </div>
         </section>
 
         <section class="typography" id="typography">
             <h3>Typography</h3>
-
-            <h1>Heading</h1>
-            <h2>Heading</h2>
-            <h3>Heading</h3>
-            <h4>Heading</h4>
-            <h5>Heading</h5>
-            <h6>Heading</h6>
+            <div class="grid">
+                <div class="column six">
+                    <h1>Heading</h1>
+                    <h2>Heading</h2>
+                    <h3>Heading</h3>
+                    <h4>Heading</h4>
+                    <h5>Heading</h5>
+                    <h6>Heading</h6>
+                </div>
+                <div class="column six">
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium eveniet tempora officia distinctio
                 sapiente possimus explicabo delectus quam rerum recusandae nam et eaque, quas optio nobis, minima, in
                 mollitia. Cupiditate.</p>
-
+            </div>
+        </div>
             <!-- Other styled text tags -->
             <h4 id="other-tags">Other Tags</h4>
             <a href="#">Link</a>
@@ -141,9 +160,9 @@
 
             <h4 id="code">Code</h4>
             <pre><code>.some-class { background-color: red; }</code></pre>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laudantium veritatis voluptatem laboriosam,
+            <p>Lorem <code>ipsum dolor sit</code> amet consectetur adipisicing elit. Non laudantium veritatis voluptatem laboriosam,
                 quibusdam libero ad, voluptatibus saepe obcaecati exercitationem eaque, temporibus asperiores excepturi
-                quas laborum. Fugiat quod quibusdam veritatis.</p>
+                quas laborum. <code>Fugiat quod</code> quibusdam veritatis.</p>
         </section>
 
         <section class="buttons" id="buttons">
@@ -165,12 +184,12 @@
             <h3>Forms</h3>
 
             <form>
-                <div class="row">
-                    <div class="six columns">
+                <div class="grid">
+                    <div class="six column">
                         <label for="exampleEmailInput">Your email</label>
                         <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
                     </div>
-                    <div class="six columns">
+                    <div class="six column">
                         <label for="exampleRecipientInput">Reason for contacting</label>
                         <select class="u-full-width" id="exampleRecipientInput">
                             <option value="Option 1">Questions</option>
@@ -178,9 +197,7 @@
                             <option value="Option 3">Can I get your number?</option>
                         </select>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">
+                    <div class="three column">
                         <fieldset>
                             <legend>Select a duckling:</legend>
                             <label for="huey">
@@ -197,7 +214,7 @@
                             </label>
                         </fieldset>
                     </div>
-                    <div class="six columns">
+                    <div class="three column">
                         <fieldset>
                             <legend>Choose features:</legend>
                             <label for="horns">
@@ -214,9 +231,8 @@
                             </label>
                         </fieldset>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="twelve columns">
+
+                    <div class="six column">
                         <fieldset>
                             <label>Please choose one or more pets:
                                 <select name="pets" multiple size="4" class="u-full-width">
@@ -273,7 +289,6 @@
             </table>
         </section>
         <section class="article" id="article">
-            <article>
                 <h3>Article</h3>
                 <img src="https://placekitten.com/g/200/300" alt="Image float left" class="u-pull-left">
                 <p>Lorem ipsum dolor sit amet <a href="#">consectetur</a> adipisicing elit. <em>Numquam quaerat corporis
@@ -306,24 +321,23 @@
                     numquam fugit quidem, <code>voluptas dolorem aperiam atque</code>, at harum reiciendis dolore culpa
                     recusandae id molestiae nulla deserunt. Sit, inventore!</p>
                 <pre><code>private parse4BitPixelData = (rawPixelData: any[]) => {
-                    const parsedPixelData = [];
-                    for (let i = 0; i < rawPixelData.length; i++) { 
-                        const byte=rawPixelData[i]; 
-                        const byteValue = padBinary(byte.toString(2), 8); 
-                        const pix0 = parseInt(byteValue.slice(0, 4), 2); 
-                        const pix1 = parseInt(byteValue.slice(4, 8), 2); 
-                        parsedPixelData.push(pix0, pix1); 
-                    } 
-                    return parsedPixelData; 
-                };</code>
-                </pre>
+    const parsedPixelData = [];
+    for (let i = 0; i < rawPixelData.length; i++) { 
+        const byte=rawPixelData[i]; 
+        const byteValue = padBinary(byte.toString(2), 8); 
+        const pix0 = parseInt(byteValue.slice(0, 4), 2); 
+        const pix1 = parseInt(byteValue.slice(4, 8), 2); 
+        parsedPixelData.push(pix0, pix1); 
+    } 
+    return parsedPixelData; 
+};</code></pre>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed neque repellendus vel aliquam
                     delectus, perspiciatis expedita laudantium adipisci quod doloribus voluptatum libero ea tenetur culpa
                     fugiat in! Necessitatibus, sit.
                     Doloremque facere facilis, sapiente in suscipit dolore a? Inventore quae voluptate esse vel. Doloremque
                     autem inventore nemo laborum in esse at, libero, reiciendis quia sunt exercitationem culpa repudiandae
                     consequatur blanditiis?</p>
-                <div class="row">
+                <div class="grid">
                     <div class="column one-half">
                         <h4>A Kitten Called Destiny</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, maxime id deleniti non cum
@@ -337,10 +351,9 @@
                             vero. Commodi quod iure quas incidunt.</p>
                     </div>
                     <div class="column one-half">
-                        <img src="http://placekitten.com/g/800/525" alt="A place kitten">
+                        <img src="http://placekitten.com/g/750/525" alt="A place kitten">
                     </div>
                 </div>
-            </article>
         </section>
 
     </main>

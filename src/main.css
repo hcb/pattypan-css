@@ -1,6 +1,6 @@
-@import url('grid.css');
-
 :root {
+    --body-font: 'Poppins', sans-serif;
+    --heading-font: 'Poppins', sans-serif;
     --whitest: hsl(0, 0%, 100%);
     --white: hsl(0, 2%, 97%);
     --gray-lightest: hsl(0, 0%, 90%);
@@ -13,8 +13,8 @@
     --blackest: hsl(0, 0%, 0%);
 
     --red: hsl(0, 75%, 50%);
-    --orange: hsl(30, 75%, 50%);
-    --yellow: hsl(48, 85%, 45%);
+    --orange: hsl(33, 86%, 50%);
+    --yellow: hsl(52, 94%, 55%);
     --green: hsl(137, 75%, 50%);
     --blue: hsl(200, 90%, 50%);
     --indigo: hsl(257, 90%, 50%);
@@ -47,8 +47,6 @@
     /*  */
     --list-style: disc;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Color Utilities // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
 .primary {
@@ -92,6 +90,11 @@
 }
 
 /* Main // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
+html,
+body {
+    height: 100%;
+}
+
 html {
     font-size: var(--font-size);
     background-color: var(--background);
@@ -101,8 +104,12 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     color: var(--text-color);
+}
+
+section {
+    margin-bottom: 3rem;
 }
 
 /* Typography // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
@@ -115,6 +122,7 @@ h6 {
     margin-top: 0;
     margin-bottom: 2rem;
     font-weight: 600;
+    font-family: var(--heading-font);
 }
 
 h1 {
@@ -168,12 +176,16 @@ a:hover {
 }
 
 /* Nav // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
-nav {
-    display: flex;flex-direction: row;
+nav,
+nav ul {
+    display: flex;
+    flex-direction: row;
 }
 
-nav ul li{
+nav>*,
+nav ul li {
     list-style-type: none;
+    padding: 0 0.5rem;
 }
 
 /* Lists // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
@@ -203,7 +215,8 @@ li {
 }
 
 /* Code // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
-code {
+code,
+pre {
     padding: .1rem .35rem;
     margin: 0 .2rem;
     font-size: 90%;
@@ -322,7 +335,7 @@ input[type="button"] {
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: transparent;
+    background-color: var(--white);
     border-radius: 4px;
     border: 1px solid var(--gray);
     cursor: pointer;
