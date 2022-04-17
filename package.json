@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "combine": "mkdir dist && cat src/*.css > dist/pattypan.css",
+    "minify": "npx postcss dist/pattypan.css -o dist/pattypan.min.css",
+    "build": "rm -rf dist && npm run combine && npm run minify"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "prettier": "2.6.2"
-  },
-  "prettier": {
-    "tabWidth": 4
+    "cssnano": "5.1.7",
+    "postcss": "8.4.12",
+    "postcss-cli": "9.1.0"
   }
 }
