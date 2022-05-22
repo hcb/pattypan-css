@@ -90,11 +90,6 @@
 }
 
 /* Main // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
-html,
-body {
-    height: 100%;
-}
-
 html {
     font-size: var(--font-size);
     background-color: var(--background);
@@ -102,6 +97,7 @@ html {
 
 body {
     font-size: 1rem;
+    min-height: 100vh;
     line-height: 1.6;
     font-weight: 400;
     font-family: var(--body-font);
@@ -110,6 +106,9 @@ body {
 
 section {
     margin-bottom: 3rem;
+}
+section:last-of-type {
+    margin-bottom: 0;
 }
 
 /* Typography // =^.^= =^.^= =^.^= =^.^= =^.^= =^.^= */
