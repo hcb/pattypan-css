@@ -48,7 +48,7 @@
 }
 
 
-.one{
+.one {
     flex-basis: 8.3333333333%;
     max-width: 8.3333333333%
 }
@@ -139,23 +139,23 @@
     margin-left: 33.33333333%
 }
 
-.offset-by-five{
+.offset-by-five {
     margin-left: 41.66666667%
 }
 
-.offset-by-six{
+.offset-by-six {
     margin-left: 50%
 }
 
-.offset-by-seven{
+.offset-by-seven {
     margin-left: 58.33333333%
 }
 
-.offset-by-eight{
+.offset-by-eight {
     margin-left: 66.66666667%
 }
 
-.offset-by-nine{
+.offset-by-nine {
     margin-left: 75%
 }
 
@@ -171,11 +171,11 @@
     margin-left: 33.33333333%
 }
 
-.offset-by-two-thirds{
+.offset-by-two-thirds {
     margin-left: 66.66666667%
 }
 
-.offset-by-one-half{
+.offset-by-one-half {
     margin-left: 50%
 }
 
@@ -184,7 +184,9 @@
         display: block;
         margin: 0;
     }
-    .column, .columns {
+
+    .column,
+    .columns {
         display: block;
         width: 100%;
         max-width: 100%;
