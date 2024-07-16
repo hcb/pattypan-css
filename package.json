@@ -6,11 +6,14 @@
   "scripts": {
     "combine": "mkdir dist && cat src/*.css > dist/pattypan.css",
     "minify": "npx postcss dist/pattypan.css -o dist/pattypan.min.css",
-    "build": "rm -rf dist && npm run combine && npm run minify"
+    "build": "rm -rf dist && npm run combine && npm run minify",
+    "dev": "nodemon --exec npx serve src"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  },
   "devDependencies": {
     "cssnano": "5.1.7",
     "postcss": "8.4.12",
